@@ -4,6 +4,10 @@ import Board from './Board'
 
 export default function Game() {
     return (
-        <Board />        
+        <div className="game">
+            <div className="game-info">
+            <Board />        
+            </div>
+        </div>
     )
 }

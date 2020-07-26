@@ -9,7 +9,7 @@ class App extends React.Component{
       return (
              
       <header className="App-header">
-        <p>This is a class based component</p>
+        <p>This is a class based component but auto reloading is not working</p>
       </header>
 
       )

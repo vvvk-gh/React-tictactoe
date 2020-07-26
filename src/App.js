@@ -16,10 +16,6 @@ class App extends React.Component{
     }
 }
 
-
-
-
-
 //Functional based component
 
 // function App() {

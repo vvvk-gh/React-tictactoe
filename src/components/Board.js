@@ -8,7 +8,7 @@ export default function Board() {
         <div>
             {/* We cant send mutiple div so we wrapped all 3 div in one parent div */}
             <div className="board-row">
-               {/*  Jsx sync */}
+               {/* below is Jsx sync and we have imported square function here so the output of square component will be show here in browser*/}
                <Square/> 
                <Square/>
                <Square/>

@@ -7,11 +7,7 @@ import './App.css';
 class App extends React.Component{
     render(){
       return (
-             
-      <header className="App-header">
-        <p>This is a class based component but auto reloading is not working</p>
-      </header>
-
+        <Game />
       )
     }
 }

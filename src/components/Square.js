@@ -4,6 +4,6 @@ import React from "react"
 
 export default function Square() {
   return(
-    <button className="square"> 2 </button>
+    <button className="square"> 3 </button>
   )
 }

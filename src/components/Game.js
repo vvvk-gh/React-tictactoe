@@ -1,15 +1,9 @@
-//Compoment File name should be always capitals just like Square.js , Game.js , Board.js
 import React from 'react'
 import Board from './Board'
 
-//converting functional component into a class component
-
 export default class Game extends React.Component {
-    constructor(){
-        //Its better to include super in the constructer for better results
-        super()
-        //creating a state to keep track of the following
-        //nextTurn , Numberofsteps ,history
+    constructor(props){
+        super(props)
         this.state = {
             xIsNext : true,
             stepNumber : 0,
@@ -18,12 +12,18 @@ export default class Game extends React.Component {
             ]
         }
     }
-    //return should be always inside the render
+//created an new function to return an value
+    someFunction = ()=> {return 5 }
+
     render(){
+        //assigning the function value to result 
+        //this keyword refers to the current object : Game.someFunction() 
+        const result = this.someFunction()
         return (
             <div className="game">
                 <div className="game-info">
-                <Board />        
+                {/* //value is the prop it holds the result value */}
+                <Board value = {result}/>        
                 </div>
             </div>
         )

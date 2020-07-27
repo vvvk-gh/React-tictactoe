@@ -2,8 +2,9 @@
 
 import React from "react"
 
-export default function Square() {
+export default function Square(props) {
   return(
-    <button className="square"> 3 </button>
+    // this will show the value that is passed from game to board and then to square 
+    <button className="square"> {props.insideValue} </button>
   )
 }

@@ -66,3 +66,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+### Props 
+We can send props only from parent to child and the reverse order wont work
+To add an number to an sqaure we have to pass the value along the hierarchy
+Game = > Board => Square using the concept of props

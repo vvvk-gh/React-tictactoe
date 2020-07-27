@@ -1,15 +1,14 @@
-//Compoment File name should be always capitals just like Square.js , Game.js , Board.js
-
 import React from 'react'
 import Square from './Square'
 
-export default function Board() {
+export default function Board(props) {
+      console.log(props) 
+    // will show you result {value: 5} as passed props is value
        return (
         <div>
-            {/* We cant send mutiple div so we wrapped all 3 div in one parent div */}
             <div className="board-row">
-               {/* below is Jsx sync and we have imported square function here so the output of square component will be show here in browser*/}
-               <Square/> 
+                {/* Need to send this passed value to the sqaure componen*/}
+               <Square insideValue = {props.value}/> 
                <Square/>
                <Square/>
            </div>

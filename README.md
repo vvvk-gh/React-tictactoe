@@ -73,3 +73,39 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 We can send props only from parent to child and the reverse order wont work
 To add an number to an sqaure we have to pass the value along the hierarchy
 Game = > Board => Square using the concept of props
+
+
+```passing props in functional components
+    
+    export default function Game(props){
+        console.log(props)
+    }
+
+```
+
+
+```passing props in class components
+    
+    export default class Game extends React.Component{
+        constructor(props){
+            super(props)
+        }
+    }
+
+```
+
+### Setstate
+
+Modifying the state property directly leads to errors we should always use serState() function to update a value
+
+```Dont
+ this.state.value = 6 // leads to errors
+
+```
+```Do
+this.setState({
+    value : 6
+})
+```
+
+Note : Everytime You make a state or props gets updated the logic and contents in the render() reloads

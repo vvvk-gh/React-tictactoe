@@ -4,6 +4,8 @@ import React from "react"
 
 export default function Square(props) {
   return( 
-    <button className="square">  </button>
+    //onclick it will go to handleclick function in Board.js (Squares parent )
+    //and button value will props.value is the jsx variable in Board.js 
+    <button className="square" onclick = {props.handleClick}> {props.value} </button>
   )
 }

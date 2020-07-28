@@ -21,7 +21,7 @@ export default class Game extends React.Component {
         squares[i] = (this.state.xIsNext) ? 'X' : 'O'
 
         this.setState({
-            history : history.contact({squares : squares}),
+            history : history.concat({squares : squares}),
             xIsNext:!this.state.xIsNext,
             stepNumber :history.length
             

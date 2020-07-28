@@ -36,7 +36,7 @@ export default class Game extends React.Component {
         return (
             <div className="game">
                 <div className="game-info">
-                <Board squares = {current.squares} clickAction = {(i) => this.handleClick }/>        
+                <Board squares = {current.squares} clickAction = {(i) => this.handleClick(i)}/>        
                 </div>
             </div>
         )

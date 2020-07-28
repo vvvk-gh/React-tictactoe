@@ -49,7 +49,7 @@ export default class Game extends React.Component {
         }
         
         else{
-            status = `Next Turn is : ${(this.xIsNext) ? 'X' : 'O'}`
+            status = " Next Turn is :" +(this.xIsNext ? 'X' : 'O') 
         }
         return (
             <div className="game">

@@ -6,6 +6,6 @@ export default function Square(props) {
   return( 
     //onclick it will go to handleclick function in Board.js (Squares parent )
     //and button value will props.value is the jsx variable in Board.js 
-    <button className="square" onclick = {props.handleClick}> {props.value} </button>
+    <button className="square" onClick = {props.handleClick}> {props.value} </button>
   )
 }

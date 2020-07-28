@@ -48,6 +48,13 @@
   flex-direction: row;
   margin: 0 auto;  
  }
+
+
+ .game-board{
+  margin-top:10px;
+  margin-bottom:10px;
+   }
+
  /* Game Info */
 ul {
   padding-left: 30px;
@@ -58,4 +65,3 @@ ul {
  .status {
   margin-bottom: 10px;
  }
- 

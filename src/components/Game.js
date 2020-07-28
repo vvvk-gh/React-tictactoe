@@ -18,7 +18,13 @@ export default class Game extends React.Component {
        const history = this.state.history
        const current = history[history.length - 1]
        const squares = current.squares
+       //to stop the action of wrinting on existing boxes or when we got an winner 
+       const winner = this.calculateWinner(squares)
+       if(winner || squares[i]){
+            return
+       }
         squares[i] = (this.state.xIsNext) ? 'X' : 'O'
+
 
         this.setState({
             history : history.concat({squares : squares}),
@@ -26,16 +32,32 @@ export default class Game extends React.Component {
             stepNumber :history.length
             
         })
+
+
       }
   
     render(){
         const history = this.state.history 
         const current = history[this.state.stepNumber]
-
+        const winner = this.calculateWinner(current.squares)
+        let status
+        if(winner){
+            status = `Winner is : ${winner}`
+        }
+        else if(this.state.stepNumber == 9){
+            status = `Refresh the page no of moves are over`
+        }
+        
+        else{
+            status = `Next Turn is : ${(this.xIsNext) ? 'X' : 'O'}`
+        }
         return (
             <div className="game">
-                <div className="game-info">
+                <div className="game-board">
                 <Board squares = {current.squares} clickAction = {(i) => this.handleClick(i)}/>        
+                </div>
+                <div>
+                    <div className="status">{status}</div>
                 </div>
             </div>
         )
